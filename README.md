@@ -5,7 +5,7 @@ The configuration about windows command line
 
 # The Colorful CMD Prompt
 Truth:
-![Truth](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Images/Truth.png?raw=true)
+![Truth](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/mycmd.png?raw=true)
 
 ## Needed Tools and files:
   - Ansicon
@@ -38,7 +38,7 @@ Truth:
     Value Data:       [Path_Of_Bat_file]
     </code></pre>
     - E.g.:
-    ![Command_processor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Images/Machine_Command%20Processor.png?raw=true)
+    ![Command_porcessor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Machine_Command%20Processor.png?raw=true)
 
 ----------------------------
 # Modify the Font in CMD
@@ -65,7 +65,7 @@ Truth:
 ...
 </code></pre>
     - E.g.:
-    ![font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Images/font.png?raw=true)
+    ![Font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/font.png?raw=true)
 
 ## Specified the cursor size:
 
@@ -79,7 +79,7 @@ Truth:
 ## Settings:
 - **Right-Click** -> **Propties** -> **Font**
 - E.g.:
-![propties](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Images/Propties.png?raw=true)
+![propties](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Propties.png?raw=true)
 
 
 ----------------------------
@@ -214,4 +214,4 @@ $HOST.UI.RawUI.CursorSize = 6
         - `7`: White
 
 ## Examples:
-![ansiconcolor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Images/ansicon_color.png?raw=true)
+![ansiconcolor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/ansicon_color.png?raw=true)
