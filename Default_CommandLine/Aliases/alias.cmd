@@ -32,4 +32,5 @@ doskey sublime="C:\Program Files\Sublime Text 3\sublime_text.exe" $*
 doskey gi=cd "c:\Marslo\Tools\Git\Github"
 doskey mj=cd "C:\Marslo\Study\My\My_Scripts\Java"
 doskey ml=cd "C:\Marslo\Study\Scripts\Laurentium\laurentium"
+doskey rs=cd "C:\Marslo\Study\Codes\Rails"
 doskey mtty="C:\MyProgrames\cygwin64\bin\mintty.exe"

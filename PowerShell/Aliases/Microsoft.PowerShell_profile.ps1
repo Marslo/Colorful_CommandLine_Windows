@@ -83,6 +83,10 @@ function openit
             "Could not find the $p"
     }
 }
+function rs
+{
+    Set-Location "C:\Marslo\Study\Codes\Rails"
+}
 function alias
 {
    Get-Content "C:\Users\jiaoolii\Documents\WindowsPowerShell\aliases_Marslo.txt"
