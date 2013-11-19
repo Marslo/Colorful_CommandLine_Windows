@@ -9,7 +9,7 @@ tree    tree .
 ats     cd "C:\Marslo\Job\Summa\FE Tools\AutoScritps"
 lno	cd "C:\Marslo\Job\Summa\FE Tools\AutoScripts\LotusNotesOpt"
 desk    cd "C:\Users\jiaoolii\Desktop"
-prog    cd "C:\Program Files"
+prog    cd "C:\Program Files (x86)"
 gr      cd "c:\"
 gh      cd "C:\Users\jiaoolii"
 wp      cd "C:\Users\jiaoolii\Documents\WindowsPowerShell"

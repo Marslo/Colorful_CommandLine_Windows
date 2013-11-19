@@ -1,5 +1,5 @@
-[Console]::CursorSize = 10
-$HOST.UI.RawUI.CursorSize = 6
+# [Console]::CursorSize = 1
+$HOST.UI.RawUI.CursorSize = 1
 Set-Alias c Clear-Host
 Set-Alias l Get-ChildItem
 Set-Alias l color-ls
@@ -45,11 +45,23 @@ function desk
 }
 function prog
 {
-    Set-Location "C:\Program Files"
+    Set-Location "C:\Program Files (x86)"
+}
+function ml
+{
+    Set-Location "C:\Marslo\Study\Scripts\Laurentium\laurentium"
+}
+function mj
+{
+    Set-Location "C:\Marslo\Study\My\My_Scripts\Java"
+}
+function gi
+{
+    Set-Location "C:\Marslo\Tools\Git"
 }
 function gr
 {
-    Set-Location c:\
+    Set-Location C:\
 }
 function gh
 {
