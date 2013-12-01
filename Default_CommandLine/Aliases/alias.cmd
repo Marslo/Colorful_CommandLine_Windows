@@ -1,7 +1,8 @@
 @echo off
 
 doskey d=dir $*
-doskey l=dir /OD
+doskey l=ls -l
+doskey ll=dir /OD
 doskey la=dir /A
 doskey c=cls
 doskey ..=cd ..
@@ -11,12 +12,13 @@ doskey exp=explorer .
 doskey openit=explorer.exe $1
 doskey vim="C:\Program Files (x86)\Vim\vim74\vim.exe" $1
 doskey gvim="C:\Program Files (x86)\Vim\vim74\gvim.exe" $1
+doskey sublime="C:\Program Files\Sublime Text 3\sublime_text.exe" $*
 doskey ipy=ipython qtconsole --pylab=inline --ConsoleWidget.font_size=12 --IPythonWidget.font_family=Monaco --profile=marslo --colors=linux --style=marslo
 doskey pf=pry -f
 doskey pwd=cd
 doskey desk=cd %HOMEPATH%\Desktop
 doskey prog=cd %PROGRAMFILES%
-doskey mpf=cd %USERPROFILE%
+doskey up=cd %USERPROFILE%
 doskey gh=cd %HOMEPATH%
 doskey cal=gvim %WINDIR%\alias.cmd
 doskey alias=cat %WINDIR%\alias.cmd
@@ -28,9 +30,9 @@ doskey gr=cd "c:\"
 doskey mpr=cd "C:\MyProgrames"
 doskey lno=cd "C:\Marslo\Job\Codes\LotusNotesOpt"
 doskey idlelib=cd "C:\MyProgrames\Python27\Lib\idlelib"
-doskey sublime="C:\Program Files\Sublime Text 3\sublime_text.exe" $*
 doskey gi=cd "c:\Marslo\Tools\Git\Github"
 doskey mj=cd "C:\Marslo\Study\My\My_Scripts\Java"
 doskey ml=cd "C:\Marslo\Study\Scripts\Laurentium\laurentium"
 doskey rs=cd "C:\Marslo\Study\Codes\Rails"
+doskey sdt=cd "C:\Marslo\Study\Codes\Rails\self-driven-travel"
 doskey mtty="C:\MyProgrames\cygwin64\bin\mintty.exe"
