@@ -5,7 +5,8 @@ The configuration about windows command line
 
 # The Colorful CMD Prompt
 Truth:
-![Truth](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/mycmd.png?raw=true)
+![Truth2](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Truth2.png?raw=true)
+![Truth1](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/mycmd.png?raw=true)
 
 ## Needed Tools and files:
   - Ansicon
