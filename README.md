@@ -38,28 +38,29 @@ The configuration about windows command line
 - ANSICON:
     - Download Ansicon from [HomePage](http://adoxa.hostmyway.net/ansicon/) or [GitHub](https://github.com/adoxa/ansicon)
     - Install:
-    <pre><code>> cd ansi161\x86\
-    > ansicon.exe -i
-    </code></pre>
+        <pre><code>> cd ansi161\x86\
+        > ansicon.exe -i
+        </code></pre>
 
 - Create bat file:
     - Characters help by using :
-    <pre><code>> prompt /?
-    </code></pre>
+        <pre><code>> prompt /?
+        </code></pre>
 
     - Example (run.bat):
-    <pre><code>@echo
-    prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
-    </code></pre>
+        <pre><code>@echo
+        prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
+        </code></pre>
 
 - Add bat file into Regedit:
-    - Open Regedit: <kbd>Ctrl</kbd>+<kbd>R</kbd> -> **regedit**
+    - Open Regedit: <kbd>Ctrl</kbd> + <kbd>R</kbd> -> **regedit**
     - Path: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor**
-    Key:
-    <pre><code>Type:             String
-    Value Name:       AutoRun
-    Value Data:       [Path_Of_Bat_file]
-    </code></pre>
+        <pre><code>Type:             String
+        Value Name:       AutoRun
+        Value Data:       [Path_Of_Bat_file]
+        </code></pre>
+    - By Command:
+        <pre><code>c:\ > reg add "HKLM\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\run.bat"</code></pre>
     - E.g.:
     ![Command_porcessor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Machine_Command%20Processor.png?raw=true)
 
@@ -69,21 +70,24 @@ The configuration about windows command line
 - Create Font Type:
     - Type:                  String
     - Key Name:       Only defined by '0' (zero)
-<pre><code>E.g.: '0', '00', ... , '00..0'
-</code></pre>
+        <pre><code>E.g.: '0', '00', ... , '00..0'
+        </code></pre>
     - Key Value:         Font Name (Only monospace series)
     E.g.:
-<pre><code>'000'    =>   Monaco
-'0000' =>    Courier New
-...
-</code></pre>
+        <pre><code>'000'    =>   Monaco
+        '0000' =>    Courier New
+        ...
+        </code></pre>
+    - By command:
+    <pre><code>c:\> reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont" /v "0000" /t REG_SZ /d "Consolas" [/f]
+    </code></pre>
     - E.g.:
-    ![Font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/font.png?raw=true)
+        ![Font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/font.png?raw=true)
 
 #### Set code page
 - Running in command line: (or **chcp 850**)
-<pre><code>> chcp 437
-</code></pre>
+    <pre><code>> chcp 437
+    </code></pre>
 - Code page regist location: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage**
 
 #### Settings:
@@ -92,6 +96,7 @@ The configuration about windows command line
     ![propties](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Propties.png?raw=true)
 
 ### Specified the cursor size:
+#### Configure by Manual
 - Open `regedit` by <kbd>Win</kbd> + <kbd>R</kbd> -> Input `regedit`
 - Go to `HKEY_CURRENT_USER` -> `Console`
 - Add keyword: <pre><code>"CursorSize"=dword:00000006</code></pre>
@@ -101,6 +106,9 @@ The configuration about windows command line
     [HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe]
     "CursorSize"=dword:00000006
     </code></pre>
+
+#### Configure by Command:
+    <pre><code>c:\> reg add "HKCU\Console" /v CursorSize /t REG_DWORD /d "1"</code></pre>
 
 ### Set aliases in Command Line(Default Command Line)
 - Create **.cmd** file (E.g.: %WINDIR%\alias.cmd)
