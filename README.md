@@ -9,12 +9,12 @@ Truth:
 - [Inline](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Default_CommandLine/Bats/run_inline_colorful.bat)
 ![Truth1](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/mycmd.png?raw=true)
 
-
-## Needed Tools and files:
+## Colorful prompt
+### Needed Tools and files:
   - Ansicon
   - A bat file
 
-## Steps:
+### Steps:
 - ANSICON:
     - Download Ansicon from [HomePage](http://adoxa.hostmyway.net/ansicon/) or [GitHub](https://github.com/adoxa/ansicon)
     - Install:
@@ -43,9 +43,8 @@ Truth:
     - E.g.:
     ![Command_porcessor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Machine_Command%20Processor.png?raw=true)
 
-----------------------------
-
-## Add the customize Font:
+## Change Font in CommandLine
+### Add the customize Font
 - Go to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont`
 - Create Font Type:
     - Type:                  String
@@ -61,26 +60,27 @@ Truth:
     - E.g.:
     ![Font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/font.png?raw=true)
 
-## Specified the cursor size:
-- Path: `Regedit` -> `HKEY_CURRENT_USER` -> `Console`
-- Keyword: <pre><code>"CursorSize"=dword:00000006</code></pre>
-- For Example:
-<pre><code>[HKEY_CURRENT_USER\Console]
-"CursorSize"=dword:00000006
-[HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe]
-"CursorSize"=dword:00000006
-</code></pre>
-
-## Set code page:
+### Set code page
 - Running in command line: (or **chcp 850**)
 <pre><code>> chcp 437
 </code></pre>
 - Code page regist location: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage**
 
-## Settings:
+### Settings:
 - **Right-Click** -> **Propties** -> **Font**
 - E.g.:
-![propties](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Propties.png?raw=true)
+    ![propties](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Propties.png?raw=true)
+
+## Specified the cursor size:
+- Open `regedit` by <kbd>Win</kbd> + <kbd>R</kbd> -> Input `regedit`
+- Go to `HKEY_CURRENT_USER` -> `Console`
+- Add keyword: <pre><code>"CursorSize"=dword:00000006</code></pre>
+- For Example:
+    <pre><code>[HKEY_CURRENT_USER\Console]
+    "CursorSize"=dword:00000006
+    [HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe]
+    "CursorSize"=dword:00000006
+    </code></pre>
 
 ## Set aliases in Command Line(Default Command Line)
 - Create **.cmd** file (E.g.: %WINDIR%\alias.cmd)
@@ -89,13 +89,13 @@ Truth:
     - CMD command: <pre><code>c:> reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\alias.cmd"
     </code></pre>
 
-## Configuration about Console:
+## Configuration about Console/Console2:
 - Copy the **console.xml** to `%APPDATA%\Console` folder
 - If the console is from [pythonxy](https://code.google.com/p/pythonxy/)
     - Copy `pythonxy\console\` to `$PYTHONXYHOME\console`.
     - For example, copy it to `C:\pythonxy\console\`
 
-## Tabs in pythonxy console:
+### Tabs in pythonxy console:
 - Tab1: Marslo - IPython (sh)
 - Tab2: Marslo - Ipython (Qt)
 - Tab3: Python
@@ -103,62 +103,62 @@ Truth:
 - Tab5: IPython (sh) [Original]
 - Tab6: Ipython (Qt) [Original]
 
-## Shortcut
+### Shortcut
 - `ctrl + s`: Open setting dialog
 - `Ctrl + F1`: Open Tab1
 - `Ctrl + F<N>`: Open Tab<N>
 - `Ctrl + 1`: Switch to Tab1
 - `Ctrl + <N>`: Switch to Tab<N>
 
-## Mouse setting
+### Mouse setting
 - `Left + Shift`: Copy/clear selection
 - `Left + Ctrl`: Drag window
 - `Left`: Select text
 - `Right`: Paste text
 
-## Configuration about TCC/LE:
+### Configuration about TCC/LE:
 - Copy the **tcstart.btm** to `%PROGRAMFILES%\JPSoft\TCCLE13`
 
-### Configuration
+#### Configuration
 - Open profile file:
-<pre><code>> gvim $PROFILE</code></pre>
+    <pre><code>> gvim $PROFILE</code></pre>
 - Set cursor size:
-<pre><code>[Console]::CursorSize = 6
-$HOST.UI.RawUI.CursorSize = 6
-</code></pre>
+    <pre><code>[Console]::CursorSize = 6
+    $HOST.UI.RawUI.CursorSize = 6
+    </code></pre>
 - List all files:
-<pre><code>function la
-{
-    $currentpath = Get-Location
-    Get-ChildItem $currentpath -force
-}
-</code></pre>
+    <pre><code>function la
+    {
+        $currentpath = Get-Location
+        Get-ChildItem $currentpath -force
+    }
+    </code></pre>
 - List all hidden file (start with ".")
-<pre><code>function l.
-{
-    # Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" } | Select FullName
-    Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" }
-}
-</code></pre>
+    <pre><code>function l.
+    {
+        # Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" } | Select FullName
+        Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" }
+    }
+    </code></pre>
 - Tree
-<pre><code>function tree
-{
-    $currentpath = Get-Location
-    Get-ChildItem $currentpath -recurse
-}
-</code></pre>
+    <pre><code>function tree
+    {
+        $currentpath = Get-Location
+        Get-ChildItem $currentpath -recurse
+    }
+    </code></pre>
 - Go to some path
-<pre><code>function prog
-{
-    Set-Location "C:\Program Files"
-}
-</code></pre>
+    <pre><code>function prog
+    {
+        Set-Location "C:\Program Files"
+    }
+    </code></pre>
 - Cat some content
-<pre><code>function alias
-{
-   Get-Content "c:\WindowsPowerShell\aliases_Marslo.txt"
-}
-</code></pre>
+    <pre><code>function alias
+    {
+       Get-Content "c:\WindowsPowerShell\aliases_Marslo.txt"
+    }
+    </code></pre>
 
 ### Some tips
 - Profile issue:
