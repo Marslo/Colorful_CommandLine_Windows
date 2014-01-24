@@ -10,7 +10,7 @@ The configuration about windows command line
 ![Truth1](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/mycmd.png?raw=true)
 
 ## Content
-- [Default CommandLine]
+- [Default CommandLine](https://github.com/Marslo/Colorful_CommandLine_Windows#default-command-line)
   - [Colorful Prompt](https://github.com/Marslo/Colorful_CommandLine_Windows#colorful-prompt)
       - [Needed Tools and files](https://github.com/Marslo/Colorful_CommandLine_Windows#colorful-prompt)
       - [Steps](https://github.com/Marslo/Colorful_CommandLine_Windows#steps)
