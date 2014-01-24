@@ -3,10 +3,12 @@ Colorful_CommandLine_Windows
 
 The configuration about windows command line
 
-# The Colorful CMD Prompt
 Truth:
+- [Changeline](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Default_CommandLine/Bats/run_changeline_colorful.bat)
 ![Truth2](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Truth2.png?raw=true)
+- [Inline](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Default_CommandLine/Bats/run_inline_colorful.bat)
 ![Truth1](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/mycmd.png?raw=true)
+
 
 ## Needed Tools and files:
   - Ansicon
@@ -31,7 +33,7 @@ Truth:
     </code></pre>
 
 - Add bat file into Regedit:
-    - Open Regedit: **Ctrl+R** -> **regedit**
+    - Open Regedit: <kbd>Ctrl</kbd>+<kbd>R</kbd> -> **regedit**
     - Path: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor**
     Key:
     <pre><code>Type:             String
@@ -42,18 +44,9 @@ Truth:
     ![Command_porcessor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Machine_Command%20Processor.png?raw=true)
 
 ----------------------------
-# Modify the Font in CMD
-- Path: `Regedit` -> `HKEY_CURRENT_USER` -> `Console`
-- Keyword: <pre><code>"CursorSize"=dword:00000006</code></pre>
-- For Example:
-<pre><code>[HKEY_CURRENT_USER\Console]
-"CursorSize"=dword:00000006
-[HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe]
-"CursorSize"=dword:00000006
-</code></pre>
 
 ## Add the customize Font:
-- Go to: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
+- Go to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont`
 - Create Font Type:
     - Type:                  String
     - Key Name:       Only defined by '0' (zero)
@@ -69,7 +62,14 @@ Truth:
     ![Font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/font.png?raw=true)
 
 ## Specified the cursor size:
-
+- Path: `Regedit` -> `HKEY_CURRENT_USER` -> `Console`
+- Keyword: <pre><code>"CursorSize"=dword:00000006</code></pre>
+- For Example:
+<pre><code>[HKEY_CURRENT_USER\Console]
+"CursorSize"=dword:00000006
+[HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe]
+"CursorSize"=dword:00000006
+</code></pre>
 
 ## Set code page:
 - Running in command line: (or **chcp 850**)
@@ -82,20 +82,17 @@ Truth:
 - E.g.:
 ![propties](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Propties.png?raw=true)
 
-
-----------------------------
-# Set aliases in Command Line(Default Command Line)
+## Set aliases in Command Line(Default Command Line)
 - Create **.cmd** file (E.g.: %WINDIR%\alias.cmd)
     - It can be copied from folder **Default_CommandLine\Aliases\**
 - Add the full file path into regist: **HKEY_CURRENT_USER\Software\Microsoft\Command Processor**
     - CMD command: <pre><code>c:> reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\alias.cmd"
     </code></pre>
 
-----------------------------
-# Configuration about Console:
+## Configuration about Console:
 - Copy the **console.xml** to `%APPDATA%\Console` folder
 - If the console is from [pythonxy](https://code.google.com/p/pythonxy/)
-    - Copy `pythonxy\console\` to `$PYTHONXYHOME\console`. 
+    - Copy `pythonxy\console\` to `$PYTHONXYHOME\console`.
     - For example, copy it to `C:\pythonxy\console\`
 
 ## Tabs in pythonxy console:
@@ -119,13 +116,10 @@ Truth:
 - `Left`: Select text
 - `Right`: Paste text
 
-----------------------------
-# Configuration about TCC/LE:
+## Configuration about TCC/LE:
 - Copy the **tcstart.btm** to `%PROGRAMFILES%\JPSoft\TCCLE13`
 
-# PowserShell
-
-## Configuration
+### Configuration
 - Open profile file:
 <pre><code>> gvim $PROFILE</code></pre>
 - Set cursor size:
@@ -166,7 +160,7 @@ $HOST.UI.RawUI.CursorSize = 6
 }
 </code></pre>
 
-## Some tips
+### Some tips
 - Profile issue:
     - Problem:<pre><code>Microsoft.PowerShell_profile.ps1 cannot be loaded</code></pre>
     - Fix method:
@@ -175,11 +169,10 @@ $HOST.UI.RawUI.CursorSize = 6
     > Get-ExecutionPolicy -list
     </code></pre>
 
-----------------------------
-# Configuration about Ansicon:
+## Configuration about Ansicon:
 - The color prompt reference: "http://adoxa.hostmyway.net/ansicon/ANSI Prompt Colours.txt"
 
-## Brief Introduction:
+### Brief Introduction:
 - **3x** and **4x**:
     - **3x**: Front Color
     - **4x**: Background Color
@@ -214,5 +207,5 @@ $HOST.UI.RawUI.CursorSize = 6
         - `6`: Cyan
         - `7`: White
 
-## Examples:
+### Examples:
 ![ansiconcolor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/ansicon_color.png?raw=true)
