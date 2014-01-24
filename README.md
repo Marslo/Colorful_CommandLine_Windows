@@ -107,7 +107,7 @@ The configuration about windows command line
     "CursorSize"=dword:00000006
     </code></pre>
 
-#### Configure by Command:
+#### Configure by Command
     <pre><code>c:\> reg add "HKCU\Console" /v CursorSize /t REG_DWORD /d "1"</code></pre>
 
 ### Set aliases in Command Line(Default Command Line)
@@ -198,7 +198,7 @@ The configuration about windows command line
     </code></pre>
 
 ## Configuration about Ansicon:
-- The color prompt reference: "http://adoxa.hostmyway.net/ansicon/ANSI Prompt Colours.txt"
+- [The color prompt reference](http://adoxa.hostmyway.net/ansicon/ANSI Prompt Colours.txt)
 
 ### Brief Introduction:
 - **3x** and **4x**:
