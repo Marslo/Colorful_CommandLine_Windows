@@ -3,18 +3,38 @@ Colorful_CommandLine_Windows
 
 The configuration about windows command line
 
-Truth:
+## Truth:
 - [Changeline](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Default_CommandLine/Bats/run_changeline_colorful.bat)
 ![Truth2](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Truth2.png?raw=true)
 - [Inline](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Default_CommandLine/Bats/run_inline_colorful.bat)
 ![Truth1](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/mycmd.png?raw=true)
 
-## Colorful prompt
-### Needed Tools and files:
+## Content
+- [Default CommandLine]
+  - [Colorful Prompt](https://github.com/Marslo/Colorful_CommandLine_Windows#colorful-prompt)
+      - [Needed Tools and files](https://github.com/Marslo/Colorful_CommandLine_Windows#colorful-prompt)
+      - [Steps](https://github.com/Marslo/Colorful_CommandLine_Windows#steps)
+  - [Specified Font](https://github.com/Marslo/Colorful_CommandLine_Windows#change-font-in-commandline)
+      - [Add the specified font](https://github.com/Marslo/Colorful_CommandLine_Windows#add-the-customize-font)
+      - [Set code page](https://github.com/Marslo/Colorful_CommandLine_Windows#set-code-page)
+      - [Set cmd use font](https://github.com/Marslo/Colorful_CommandLine_Windows#settings)
+  - [Specified Cursor Size](https://github.com/Marslo/Colorful_CommandLine_Windows#specified-the-cursor-size)
+  - [Set aliases in cmd](https://github.com/Marslo/Colorful_CommandLine_Windows#set-aliases-in-command-linedefault-command-line)
+- [Console/Console2](https://github.com/Marslo/Colorful_CommandLine_Windows#configuration-about-consoleconsole2)
+    -[ShortCuts](https://github.com/Marslo/Colorful_CommandLine_Windows#shortcut)
+    - [Mouse Seeting](https://github.com/Marslo/Colorful_CommandLine_Windows#mouse-setting)
+- [TCC/LE](https://github.com/Marslo/Colorful_CommandLine_Windows#configuration-about-tccle)
+    - [Configuration](https://github.com/Marslo/Colorful_CommandLine_Windows#configuration)
+    - [Tips](https://github.com/Marslo/Colorful_CommandLine_Windows#some-tips)
+- [Anscion Colors](https://github.com/Marslo/Colorful_CommandLine_Windows#configuration-about-ansicon)
+
+## Default Command Line
+### Colorful prompt
+#### Needed Tools and files:
   - Ansicon
   - A bat file
 
-### Steps:
+#### Steps:
 - ANSICON:
     - Download Ansicon from [HomePage](http://adoxa.hostmyway.net/ansicon/) or [GitHub](https://github.com/adoxa/ansicon)
     - Install:
@@ -43,8 +63,8 @@ Truth:
     - E.g.:
     ![Command_porcessor](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Machine_Command%20Processor.png?raw=true)
 
-## Change Font in CommandLine
-### Add the customize Font
+### Change Font in CommandLine
+#### Add the customize Font
 - Go to: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont`
 - Create Font Type:
     - Type:                  String
@@ -60,18 +80,18 @@ Truth:
     - E.g.:
     ![Font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/font.png?raw=true)
 
-### Set code page
+#### Set code page
 - Running in command line: (or **chcp 850**)
 <pre><code>> chcp 437
 </code></pre>
 - Code page regist location: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage**
 
-### Settings:
+#### Settings:
 - **Right-Click** -> **Propties** -> **Font**
 - E.g.:
     ![propties](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/Propties.png?raw=true)
 
-## Specified the cursor size:
+### Specified the cursor size:
 - Open `regedit` by <kbd>Win</kbd> + <kbd>R</kbd> -> Input `regedit`
 - Go to `HKEY_CURRENT_USER` -> `Console`
 - Add keyword: <pre><code>"CursorSize"=dword:00000006</code></pre>
@@ -82,7 +102,7 @@ Truth:
     "CursorSize"=dword:00000006
     </code></pre>
 
-## Set aliases in Command Line(Default Command Line)
+### Set aliases in Command Line(Default Command Line)
 - Create **.cmd** file (E.g.: %WINDIR%\alias.cmd)
     - It can be copied from folder **Default_CommandLine\Aliases\**
 - Add the full file path into regist: **HKEY_CURRENT_USER\Software\Microsoft\Command Processor**
@@ -116,7 +136,7 @@ Truth:
 - `Left`: Select text
 - `Right`: Paste text
 
-### Configuration about TCC/LE:
+## Configuration about TCC/LE:
 - Copy the **tcstart.btm** to `%PROGRAMFILES%\JPSoft\TCCLE13`
 
 #### Configuration
