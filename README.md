@@ -36,7 +36,7 @@ The configuration about windows command line
 
 #### Steps:
 - ANSICON:
-    - Download Ansicon from [HomePage](http://adoxa.hostmyway.net/ansicon/) or [GitHub](https://github.com/adoxa/ansicon)
+    - Download Ansicon from [HomePage](http://adoxa.altervista.org/ansicon) or [GitHub](https://github.com/adoxa/ansicon)
     - Install:
         <pre><code>> cd ansi161\x86\
         > ansicon.exe -i
