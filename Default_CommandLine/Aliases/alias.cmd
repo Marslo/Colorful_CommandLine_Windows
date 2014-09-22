@@ -17,6 +17,8 @@ doskey vim="C:\MyProgrames\Vim\vim74\gvim.exe" $1
 doskey gvim="C:\MyProgrames\Vim\vim74\gvim.exe" $1
 doskey ipy=ipython qtconsole --pylab=inline --ConsoleWidget.font_size=12 --IPythonWidget.font_family=Monaco --profile=marslo --colors=linux --style=marslo
 doskey pf=pry -f
+doskey netdis=netsh interface set interface name="Wireless Network Connection" admin=disable
+doskey neten=netsh interface set interface name="Wireless Network Connection" admin=enable
 doskey pwd=cd
 doskey desk=cd %HOMEPATH%\Desktop
 doskey prog=cd %PROGRAMFILES%
