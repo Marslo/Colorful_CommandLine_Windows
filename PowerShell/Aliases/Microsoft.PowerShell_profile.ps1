@@ -3,7 +3,6 @@ $HOST.UI.RawUI.CursorSize = 1
 Set-Alias c Clear-Host
 Set-Alias l Get-ChildItem
 Set-Alias l color-ls
-Set-Alias subl "C:\Program Files\Sublime Text 3\sublime_text.exe"
 function la
 {
     $currentpath = Get-Location
@@ -41,7 +40,7 @@ function lno
 }
 function desk
 {
-    Set-Location "C:\Users\jiaoolii\Desktop"
+    Set-Location "C:\Users\Marslo_Jiao\Desktop"
 }
 function prog
 {
@@ -55,7 +54,7 @@ function mj
 {
     Set-Location "C:\Marslo\Study\My\My_Scripts\Java"
 }
-function gi
+function cdgi
 {
     Set-Location "C:\Marslo\Tools\Git"
 }
@@ -63,9 +62,9 @@ function gr
 {
     Set-Location C:\
 }
-function gh
+function up
 {
-    Set-Location "C:\Users\jiaoolii"
+    Set-Location "C:\Users\Marslo_Jiao"
 }
 function ex
 {
@@ -89,11 +88,11 @@ function rs
 }
 function alias
 {
-   Get-Content "C:\Users\jiaoolii\Documents\WindowsPowerShell\aliases_Marslo.txt"
+   Get-Content "C:\Users\Marslo_Jiao\Documents\WindowsPowerShell\aliases_Marslo.txt"
 }
 function wp
 {
-    Set-Location "C:\Users\jiaoolii\Documents\WindowsPowerShell"
+    Set-Location "C:\Users\Marslo_Jiao\Documents\WindowsPowerShell"
 }
 
 function color-ls {
@@ -136,16 +135,20 @@ function color-ls {
 
 function prompt
 {
+    $dgray = [ConsoleColor]::DarkGray
+    $red = [ConsoleColor]::Red
+
     # Set Window Title
     $host.UI.RawUI.WindowTitle = "$ENV:USERNAME@$ENV:COMPUTERNAME - $(Get-Location)"
 
     # Set Prompt
-    # Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor Red
-    Write-Host (Get-Date -UFormat "%Y/%m/%d") -NoNewline -ForegroundColor Red
-    Write-Host (Get-Date -UFormat " %r ") -NoNewline -ForegroundColor Green
-    # Write-Host " [" -NoNewline -ForegroundColor DarkGray
-    # Write-Host $(get-location) -ForegroundColor DarkGray -NoNewline
-    # Write-Host "] " -NoNewline -ForegroundColor DarkGray
+    # Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor $red
+    # Write-Host (Get-Date -UFormat "%Y/%m/%d") -NoNewline -ForegroundColor $red
+    Write-Host " " -ForegroundColor $dgray
+    Write-Host "[" -NoNewline -ForegroundColor $dgray
+    Write-Host (Get-Date -UFormat "%r ") -NoNewline -ForegroundColor $dgray
+    Write-Host $(get-location) -NoNewline -ForegroundColor $red
+    Write-Host "] " -ForegroundColor $dgray
 
     # Check for Administrator elevation
     $wid=[System.Security.Principal.WindowsIdentity]::GetCurrent()
@@ -153,11 +156,11 @@ function prompt
     $adm=[System.Security.Principal.WindowsBuiltInRole]::Administrator
     $IsAdmin=$prp.IsInRole($adm)
     if ($IsAdmin) {
-        Write-Host ">>" -NoNewline -ForegroundColor Red
+        Write-Host "#" -NoNewline -ForegroundColor $dgray
         return " "
     }
     else {
-        Write-Host ">" -NoNewline -ForegroundColor Gray
+        Write-Host "$" -NoNewline -ForegroundColor $dgray
         return " "
     }
  }
