@@ -3,6 +3,10 @@ $HOST.UI.RawUI.CursorSize = 1
 Set-Alias c Clear-Host
 Set-Alias l Get-ChildItem
 Set-Alias l color-ls
+function scp
+{
+    C:\Marslo\MyProgramFiles\Git\bin\scp.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i "C:\Marslo\MarsloVeritas\Box Sync\Tools\Software\System\RemoteConnection\AuthorizedKeys\Marslo@Appliance"
+}
 function la
 {
     $currentpath = Get-Location
@@ -42,13 +46,17 @@ function desk
 {
     Set-Location "C:\Users\Marslo_Jiao\Desktop"
 }
+function myprog
+{
+    Set-Location "C:\Marslo\MyProgramFiles"
+}
 function prog
 {
     Set-Location "C:\Program Files (x86)"
 }
-function ml
+function cdbox
 {
-    Set-Location "C:\Marslo\Study\Scripts\Laurentium\laurentium"
+    Set-Location "C:\Marslo\MarsloVeritas\Box Sync"
 }
 function mj
 {
@@ -66,7 +74,7 @@ function up
 {
     Set-Location "C:\Users\Marslo_Jiao"
 }
-function ex
+function exp
 {
     explorer .
 }
@@ -82,9 +90,13 @@ function openit
             "Could not find the $p"
     }
 }
-function rs
+function msl
 {
-    Set-Location "C:\Marslo\Study\Codes\Rails"
+    Set-Location "C:\Marslo\MarsloVeritas\Code\Perforce\appliance\poc\marslo"
+}
+function rel
+{
+    Set-Location "C:\Marslo\MarsloVeritas\Code\Perforce\appliance\releng\main"
 }
 function alias
 {
@@ -93,6 +105,10 @@ function alias
 function wp
 {
     Set-Location "C:\Users\Marslo_Jiao\Documents\WindowsPowerShell"
+}
+function nba
+{
+    Set-Location "C:\Marslo\MarsloVeritas\Code\Perforce\appliance\nba\main"
 }
 
 function color-ls {
