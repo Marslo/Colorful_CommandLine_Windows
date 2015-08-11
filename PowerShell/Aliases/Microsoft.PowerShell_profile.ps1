@@ -158,9 +158,18 @@ function prompt
     $host.UI.RawUI.WindowTitle = "$ENV:USERNAME@$ENV:COMPUTERNAME - $(Get-Location)"
 
     # Set Prompt
+    Write-Host " " -ForegroundColor $dgray
+
+    # Show providername if you are outside FileSystem
+    # Inspired from http://www.snowland.se/2010/02/23/nice-powershell-prompt
+    if ($pwd.Provider.Name -ne "FileSystem") {
+      Write-Host "[" -nonewline -foregroundcolor $dgray
+      Write-Host $pwd.Provider.Name -nonewline -foregroundcolor $dgray
+      Write-Host "] " -nonewline -foregroundcolor $dgray
+    }
+
     # Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor $red
     # Write-Host (Get-Date -UFormat "%Y/%m/%d") -NoNewline -ForegroundColor $red
-    Write-Host " " -ForegroundColor $dgray
     Write-Host "[" -NoNewline -ForegroundColor $dgray
     Write-Host (Get-Date -UFormat "%r ") -NoNewline -ForegroundColor $dgray
     Write-Host $(get-location) -NoNewline -ForegroundColor $red
@@ -180,6 +189,7 @@ function prompt
         return " "
     }
  }
+
 # functio mgp
 # {
     # param(
