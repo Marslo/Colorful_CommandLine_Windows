@@ -1,7 +1,8 @@
 @echo off
 
 doskey d=dir $*
-doskey l=ls -l
+doskey ls="C:\Marslo\MyProgramFiles\Git\usr\bin\ls.exe"
+doskey l="C:\Marslo\MyProgramFiles\Git\usr\bin\ls.exe" -l
 doskey ll=dir /OD
 doskey la=dir /A
 doskey c=cls
@@ -26,21 +27,22 @@ doskey gh=cd %HOMEPATH%
 doskey gr=cd "C:\"
 doskey mpr=cd "C:\Marslo\MyProgramFiles"
 doskey idlelib=cd "C:\Marslo\MyProgramFiles\Python27\Lib\idlelib"
-doskey jo=cd "D:\Box Sync\Job\"
-doskey gi=cd "D:\Tools\Git\"
-doskey pef=cd "D:\Codes\Perforce\appliance\"
-doskey rel=cd "D:\Codes\Perforce\appliance\releng\main\"
+doskey jo=cd "C:\Marslo\Job"
+doskey co=cd "C:\Marslo\Job\Code"
+doskey to=cd "C:\Marslo\Tools"
+doskey gi=cd "C:\Marslo\Tools\Git\repo_marslo"
+doskey so=cd "C:\Marslo\Tools\Software"
 doskey cal=gvim %WINDIR%\alias.cmd
 doskey alias=type %WINDIR%\alias.cmd
 doskey jt=java.exe junit.textui.TestRunner $1
 doskey jc=java.exe org.junit.runner.JUnitCore $1
 doskey jaw=java -cp .;c:\MyProgrames\junit3.8.1\junit.jar junit.awtui.TestRunner $1
 doskey jsw=java -cp .;c:\MyProgrames\junit3.8.1\junit.jar junit.swingui.TestRunner $1
-doskey addalias=reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\alias.cmd"
 doskey mtty="C:\Marslo\MyProgramFiles\cygwin64\bin\mintty.exe" 
 doskey subl="C:\Marslo\MyProgramFiles\Sublime Text 3\sublime_text.exe" $*
 doskey vim="C:\Marslo\MyProgramFiles\Vim\vim74\vim.exe" $1
 doskey gvim="C:\Marslo\MyProgramFiles\Vim\vim74\gvim.exe" $1
+doskey addalias=reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\alias.cmd"
 doskey runbat="C:\Windows\run.bat"
-doskey scp=scp.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i "D:\Box Sync\Tools\Software\System\RemoteConnection\AuthorizedKeys\Marslo@Appliance" $*
-doskey ssh=ssh.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i "D:\Box Sync\Tools\Software\System\RemoteConnection\AuthorizedKeys\Marslo@Appliance" $*
+doskey scp=C:\Marslo\MyProgramFiles\Git\usr\bin\scp.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i "c:\Marslo\Tools\Software\System\RemoteConnection\AuthorizedKeys\openssh\marslo@philips" $*
+doskey ssh=C:\Marslo\MyProgramFiles\Git\usr\bin\ssh.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i "c:\Marslo\Tools\Software\System\RemoteConnection\AuthorizedKeys\openssh\marslo@philips" $*
