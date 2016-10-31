@@ -259,3 +259,49 @@ exit
 cd C:\Marslo\Tools\Software\System\CommandLine\Ansi\ansi166\x64\
 ls
 exit
+apm install vim-mode-plus-project-find-from-search
+apm config ls
+vim c:
+vim c:\Users\310258281\.atom\.apm\.apmrc 
+apm install help
+exit
+apm install atom-vim-like-tab
+apm update
+apm install vim-mode-visual-block
+apm install language-viml
+apm install vim-mode-clipboard-plus
+apm install
+apm -h
+apm remove atom-vim-like-tab
+apm package ls
+apm install tab-swither
+apm install tab-switcher
+apm install vim-surround
+apm list --installed
+apm list --installed | grep high
+apm install  'vim-mode:insert-at-beginning-of-line' 
+apm install  quick-highlight
+apm list --installed  --bare 
+apm list --installed  --bare | grep vim
+apm list --installed  --bare | grep vim --color=always
+apm config
+apm config ls
+npm config ls -l
+apm config ls -l
+exit
+apm list --installed 
+apm list --installed  | grep vim
+apm list --installed  | grep vim --color=always
+exit
+exit
+apm list --installed  | grep vim --color=always
+apm list --installed | grep vim
+apm list --installed --bare | grep '^[^@]\+'
+apm list --them
+apm list --theme
+apm list help
+cmderr
+apm list --installed
+apm list --installed | grep vim
+exit
+apm list --install | grep lua
