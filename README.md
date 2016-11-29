@@ -79,7 +79,7 @@ The configuration about windows command line
         ...
         </code></pre>
     - By command:
-    <pre><code>c:\> reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont" /v "0000" /t REG_SZ /d "Consolas" [/f]
+    <pre><code>c:\> reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont" /v "0000" /t REG_SZ /d "Consolas" /f
     </code></pre>
     - E.g.:
         ![Font](https://github.com/Marslo/Colorful_CommandLine_Windows/blob/master/Screenshots/font.png?raw=true)
