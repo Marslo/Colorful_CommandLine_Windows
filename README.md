@@ -108,7 +108,7 @@ The configuration about windows command line
     </code></pre>
 
 #### Configure by Command
-    <pre><code>c:\> reg add "HKCU\Console" /v CursorSize /t REG_DWORD /d "1"</code></pre>
+    c:\> reg add "HKCU\Console" /v CursorSize /t REG_DWORD /d "1" /f
 
 ### Set aliases in Command Line(Default Command Line)
 - Create **.cmd** file (E.g.: %WINDIR%\alias.cmd)
@@ -134,9 +134,9 @@ The configuration about windows command line
 ### Shortcut
 - `ctrl + s`: Open setting dialog
 - `Ctrl + F1`: Open Tab1
-- `Ctrl + F<N>`: Open Tab<N>
+- `Ctrl + F<N>`: Open Tab`<N>`
 - `Ctrl + 1`: Switch to Tab1
-- `Ctrl + <N>`: Switch to Tab<N>
+- `Ctrl + <N>`: Switch to Tab`<N>`
 
 ### Mouse setting
 - `Left + Shift`: Copy/clear selection
